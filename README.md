@@ -1,5 +1,6 @@
 # HexGrid
-Functions for creating hexagonal grids in R
+Functions for creating hexagonal grids in R.
+
 Thank you for visiting this git.  I've created a suite of functions that allow users of the R language and programming environment to:
 * create hexagonal grids
  * as rectangular and
