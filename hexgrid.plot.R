@@ -31,7 +31,7 @@ plot.hex <- function(hex.dist.obj, grid.text = F, text.cex){
 		hex.coords$x <- hex.coords$x*size
 		hex.coords$y <- hex.coords$y*size
 		names(hex.coords) <- c("y", "x", "no.sep")
-		hexpolygon(hex.dist.obj[,,m,1], hex.dist.obj[,,m,2], hexC = hex.coords, fill = F, col = paste(col.pal, "" ,sep = ""), lty = 0)
+		hexpolygon(hex.dist.obj[,,m,1], hex.dist.obj[,,m,2], hexC = hex.coords, fill = F, col = paste(col.pal, "" ,sep = ""), lty = 1)
 		if(grid.text == T) {
 			if (missing(text.cex) == T){text.cex <- 3/d}
 			text(hex.dist.obj[,,m,1], hex.dist.obj[,,m,2], round(distance[,,m],2), col = "red", cex = text.cex)
