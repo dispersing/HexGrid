@@ -9,4 +9,5 @@ Thank you for visiting this git.  I've created a suite of functions that allow u
  * distance matrices
  * either type of hexagonal grid
 This is obviously in progress, but please feel freel to fork or watch.
+
 Thanks.
