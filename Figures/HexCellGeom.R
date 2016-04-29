@@ -1,7 +1,7 @@
 pdf("~/Dropbox/Projects/HexGrid/Figures/HexCellPoint.pdf", height = 6, width = 6)
 
 # use hexcell.coords to give hexagonal cell coordinates
-	cr <- 3
+	cr <- 1
 	coords <- hexcell.coords(cr, rotation = "point-topped")
 
 #blank plot
@@ -10,7 +10,7 @@ pdf("~/Dropbox/Projects/HexGrid/Figures/HexCellPoint.pdf", height = 6, width = 6
 
 # background lines where the axis tick marks will be
 	# abline(v = c(cr, cr*3/4, 0, -cr*3/4, -cr), h = c(cr*sqrt(3)/2, cr*sqrt(3)/4, 0, -cr*sqrt(3)/4, -cr*sqrt(3)/2), col = "grey80", lwd = 3/4)
-	abline(h = c(cr, cr*3/4, 0, -cr*3/4, -cr), v = c(cr*sqrt(3)/2, cr*sqrt(3)/4, 0, -cr*sqrt(3)/4, -cr*sqrt(3)/2), col = "grey80", lwd = 3/4)
+	abline(h = c(cr, cr/2, 0, -cr/2, -cr), v = c(cr*sqrt(3)/2, 0, -cr*sqrt(3)/2), col = "grey80", lwd = 3/4)
 
 
 # hexagon
@@ -44,20 +44,20 @@ pdf("~/Dropbox/Projects/HexGrid/Figures/HexCellPoint.pdf", height = 6, width = 6
 # axis labels
 	# axis(1, at = c(cr, cr*3/4, 0, -cr*3/4, -cr), labels = F)
 	# mtext(side = 1, c("r", expression(frac(3*r*sqrt(3),4)), 0, expression(frac(-3*r*sqrt(3),4)), "-r"), at = c(cr, cr*3/4, 0, -cr*3/4, -cr), line = 0.5, padj = 1)
-axis(2, at = c(cr, cr*3/4, 0, -cr*3/4, -cr), labels = F)
-	mtext(side = 2, c("r", expression(frac(3*r*sqrt(3),4)), 0, expression(frac(-3*r*sqrt(3),4)), "-r"), at = c(cr, cr*3/4, 0, -cr*3/4, -cr), line = 1, las = 1)
+axis(2, at = c(cr, cr/2, 0, -cr/2, -cr), labels = F)
+	mtext(side = 2, c("r", expression(frac(r,2)), 0, expression(frac(r,2)), "-r"), at = c(cr, cr/2, 0, -cr/2, -cr), line = 1, las = 1)
 
 	# axis(2, at = c(cr*sqrt(3)/2, cr*sqrt(3)/4, 0, -cr*sqrt(3)/4, -cr*sqrt(3)/2), labels = F)
 	# mtext(side = 2, c(expression(frac(r*sqrt(3),2)), expression(frac(r*sqrt(3),4)),0, expression(frac(-r*sqrt(3),4)), expression(frac(-r*sqrt(3),2))), at = c(cr*sqrt(3)/2, cr*sqrt(3)/4, 0, -cr*sqrt(3)/4, -cr*sqrt(3)/2), las = 1, line = 1)
-	axis(1, at = c(cr*sqrt(3)/2, cr*sqrt(3)/4, 0, -cr*sqrt(3)/4, -cr*sqrt(3)/2), labels = F)
-	mtext(side = 1, c(expression(frac(r*sqrt(3),2)), expression(frac(r*sqrt(3),4)),0, expression(frac(-r*sqrt(3),4)), expression(frac(-r*sqrt(3),2))), at = c(cr*sqrt(3)/2, cr*sqrt(3)/4, 0, -cr*sqrt(3)/4, -cr*sqrt(3)/2), las = 1, line = 0.5, padj = 1)
+	axis(1, at = c(cr*sqrt(3)/2, 0, -cr*sqrt(3)/2), labels = F)
+	mtext(side = 1, c(expression(frac(r*sqrt(3),2)),0, expression(frac(-r*sqrt(3),2))), at = c(cr*sqrt(3)/2, 0, -cr*sqrt(3)/2), las = 1, line = 0.5, padj = 1)
 
 
 	# axis(3, at = c(cr, cr*3/4, 0, -cr*3/4, -cr), labels = c(cr, cr*3/4, 0, -cr*3/4, -cr))
-	axis(4, at = c(cr, cr*3/4, 0, -cr*3/4, -cr), labels = c(cr, cr*3/4, 0, -cr*3/4, -cr), las = 1)
+	axis(4, at = c(cr, cr/2, 0, -cr/2, -cr), labels = c(cr, cr/2, 0, -cr/2, -cr), las = 1)
 	
 	# axis(4, at = c(cr*sqrt(3)/2, cr*sqrt(3)/4, 0, -cr*sqrt(3)/4, -cr*sqrt(3)/2), labels = round(c(cr*sqrt(3)/2, cr*sqrt(3)/4, 0, -cr*sqrt(3)/4, -cr*sqrt(3)/2),2), las = 1)
-	axis(3, at = c(cr*sqrt(3)/2, cr*sqrt(3)/4, 0, -cr*sqrt(3)/4, -cr*sqrt(3)/2), labels = round(c(cr*sqrt(3)/2, cr*sqrt(3)/4, 0, -cr*sqrt(3)/4, -cr*sqrt(3)/2),2))
+	axis(3, at = c(cr*sqrt(3)/2, 0, -cr*sqrt(3)/2), labels = round(c(cr*sqrt(3)/2, 0, -cr*sqrt(3)/2),2))
 
 
 #legend
