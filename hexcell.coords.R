@@ -1,5 +1,5 @@
 hexcell.coords <- function(cell.radius = 1, rotation = "flat-topped"){
-	s <- 3^0.5
+	s <- sqrt(3)
 	if (rotation == "flat-topped") {
 		x <- c(cell.radius, cell.radius/2, -cell.radius/2, -cell.radius, -cell.radius/2, cell.radius/2)
 		y <- c(0, -cell.radius*s/2, -cell.radius*s/2, 0, cell.radius*s/2, cell.radius*s/2)
@@ -14,3 +14,5 @@ hexcell.coords <- function(cell.radius = 1, rotation = "flat-topped"){
 	 	warning("Unidentified rotation")
 	 	}
 	}
+
+hexcell.coords(1, rotation = "point-topped")
