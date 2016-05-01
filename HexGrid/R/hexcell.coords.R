@@ -1,3 +1,11 @@
+#' Coordinates for a single hexagonal cell
+#'
+#' @param cell.radius length from the ceter of the cell to the six corners
+#' @returns a list of with horizontal and vertical coordinates, respectively names x and y.
+#' @examples
+#' hexcell.coords(1)
+
+
 hexcell.coords <- function(cell.radius = 1, rotation = "flat-topped"){
 	s <- sqrt(3)
 	if (rotation == "flat-topped") {
@@ -14,5 +22,3 @@ hexcell.coords <- function(cell.radius = 1, rotation = "flat-topped"){
 	 	warning("Unidentified rotation")
 	 	}
 	}
-
-hexcell.coords(1, rotation = "point-topped")
