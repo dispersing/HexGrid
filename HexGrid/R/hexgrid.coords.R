@@ -68,30 +68,32 @@ print(grid.arr)
 	return(dist.arr)
 	}
 
-
-
+# fig.dir <- "~/Dropbox/Projects/HexGrid/HexGrid/man/figures"
+# setwd(fig.dir)
+# png(paste(fig.dir, "/FlatPointEvenOdd.png",sep = ""), res = 100)
 # rad <- 1
-# par(mfrow = c(2,2), mar = c(2,2,2,0), oma = rep(1,4))
+# par(mfrow = c(2,2), mar = c(2,2,2,0), oma = rep(1,4), cex = 0.75)
 # hd <- hexgrid.coords(5, offset ="even", cell.radius = rad, rotation = "flat-topped")
 # hexgrid.plot(hd[,,1,1], hd[,,1,2], cell.coords = hexcell.coords(rad, rotation = "flat-topped"), col = rgb(0,0,1,.1), border = "grey50")
 # axis(1, labels = T)
 # axis(2, labels = T, las = 1)
-# mtext("Flat-topped, even offset", side = 3, line = 0)
+# mtext("Flat-topped, even offset", side = 3, line = 0, cex = 0.75)
 
 # hd <- hexgrid.coords(5, offset ="odd", cell.radius = rad, rotation = "flat-topped")
 # hexgrid.plot(hd[,,1,1], hd[,,1,2], cell.coords = hexcell.coords(rad, rotation = "flat-topped"), col = rgb(0,0,1,.1), border = "grey50")
 # axis(1, labels = T)
 # axis(2, labels = T, las = 1)
-# mtext("Flat-topped, odd offset", side = 3, line = 0)
+# mtext("Flat-topped, odd offset", side = 3, line = 0, cex = 0.75)
 
 # hd <- hexgrid.coords(5, offset ="even", cell.radius = rad, rotation = "point-topped")
 # hexgrid.plot(hd[,,1,1], hd[,,1,2], cell.coords = hexcell.coords(rad, rotation = "point-topped"), col = rgb(0,0,1,.1), border = "grey50")
 # axis(1, labels = T)
 # axis(2, labels = T, las = 1)
-# mtext("Point-topped, even offset", side = 3, line = 0)
+# mtext("Point-topped, even offset", side = 3, line = 0, cex = 0.75)
 
 # hd <- hexgrid.coords(5, offset ="odd", cell.radius = rad, rotation = "point-topped")
 # hexgrid.plot(hd[,,1,1], hd[,,1,2], cell.coords = hexcell.coords(rad, rotation = "point-topped"), col = rgb(0,0,1,.1), border = "grey50")
 # axis(1, labels = T)
 # axis(2, labels = T, las = 1)
-# mtext("Point-topped, odd offset", side = 3, line = 0)
+# mtext("Point-topped, odd offset", side = 3, line = 0, cex = 0.75)
+# dev.off()

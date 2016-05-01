@@ -8,9 +8,8 @@ hexcell.coords(cell.radius = 1, rotation = "flat-topped")
 }
 \arguments{
 \item{cell.radius}{length from the ceter of the cell to the six corners}
-}
-\description{
-Coordinates for a single hexagonal cell
+
+\item{rotation}{either of the two values: "flat-topped" or "point-topped"}
 }
 \examples{
 hexcell.coords(1)

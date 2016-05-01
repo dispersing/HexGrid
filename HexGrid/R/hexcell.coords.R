@@ -1,7 +1,9 @@
 #' Coordinates for a single hexagonal cell
 #'
 #' @param cell.radius length from the ceter of the cell to the six corners
-#' @returns a list of with horizontal and vertical coordinates, respectively names x and y.
+#' @param rotation either of the two values: "flat-topped" or "point-topped"
+#' @description 
+#' @value a list of with horizontal and vertical coordinates, respectively names x and y.
 #' @examples
 #' hexcell.coords(1)
 
