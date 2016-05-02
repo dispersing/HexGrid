@@ -2,11 +2,14 @@
 #'
 #' @param cell.radius length from the ceter of the cell to the six corners
 #' @param rotation either of the two values: "flat-topped" or "point-topped"
-#' @description 
-#' @value a list of with horizontal and vertical coordinates, respectively names x and y.
+#' @description attempt
+#' @return a list of with horizontal and vertical coordinates, respectively names x and y.
 #' @examples
-#' hexcell.coords(1)
-
+#' # Example 1, default where cell.radius = 1 and hexagon is flat-topped
+#'    hexcell.coords()
+#'
+#' # Example 2, cell.radius = 2 and hexagon is point-topped
+#' hexcell.coords(2, roataion = "point-topped")
 
 hexcell.coords <- function(cell.radius = 1, rotation = "flat-topped"){
 	s <- sqrt(3)

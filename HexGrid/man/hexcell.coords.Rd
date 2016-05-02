@@ -11,7 +11,17 @@ hexcell.coords(cell.radius = 1, rotation = "flat-topped")
 
 \item{rotation}{either of the two values: "flat-topped" or "point-topped"}
 }
+\value{
+a list of with horizontal and vertical coordinates, respectively names x and y.
+}
+\description{
+attempt
+}
 \examples{
-hexcell.coords(1)
+# Example 1, default where cell.radius = 1 and hexagon is flat-topped
+   hexcell.coords()
+
+# Example 2, cell.radius = 2 and hexagon is point-topped
+hexcell.coords(2, roataion = "point-topped")
 }
 

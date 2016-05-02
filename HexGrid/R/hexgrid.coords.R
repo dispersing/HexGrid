@@ -1,3 +1,5 @@
+
+
 hexgrid.coords <- function(grid.dim, rotation = "flat-topped", offset = "even", cell.radius = 1){
 if (length(grid.dim) > 2) {stop("grid.dim can only be length 1 or 2 (hexagonal grid radius or rectangular grid, respectively)")}
 if (any(offset == c("even","odd")) == F) {stop("offset must be either `even' or `odd'.")}
@@ -68,32 +70,37 @@ print(grid.arr)
 	return(dist.arr)
 	}
 
-# fig.dir <- "~/Dropbox/Projects/HexGrid/HexGrid/man/figures"
-# setwd(fig.dir)
-# png(paste(fig.dir, "/FlatPointEvenOdd.png",sep = ""), res = 100)
+# # fig.dir <- "~/Dropbox/Projects/HexGrid_package/HexGrid/man/figures"
+# # setwd(fig.dir)
+# # png(paste(fig.dir, "/FlatPointEvenOdd.png",sep = ""), res = 100)
 # rad <- 1
-# par(mfrow = c(2,2), mar = c(2,2,2,0), oma = rep(1,4), cex = 0.75)
+# par(mfrow = c(2,2), mar = c(2,2,2,2), oma = rep(1,4), cex = 0.75)
 # hd <- hexgrid.coords(5, offset ="even", cell.radius = rad, rotation = "flat-topped")
 # hexgrid.plot(hd[,,1,1], hd[,,1,2], cell.coords = hexcell.coords(rad, rotation = "flat-topped"), col = rgb(0,0,1,.1), border = "grey50")
 # axis(1, labels = T)
 # axis(2, labels = T, las = 1)
 # mtext("Flat-topped, even offset", side = 3, line = 0, cex = 0.75)
+# text(0, 0, labels = "(0, 0)", cex = 0.75)
 
 # hd <- hexgrid.coords(5, offset ="odd", cell.radius = rad, rotation = "flat-topped")
-# hexgrid.plot(hd[,,1,1], hd[,,1,2], cell.coords = hexcell.coords(rad, rotation = "flat-topped"), col = rgb(0,0,1,.1), border = "grey50")
+# hexgrid.plot(hd[,,13,1], hd[,,1,2], cell.coords = hexcell.coords(rad, rotation = "flat-topped"), col = rgb(0,0,1,.1), border = "grey50")
 # axis(1, labels = T)
 # axis(2, labels = T, las = 1)
 # mtext("Flat-topped, odd offset", side = 3, line = 0, cex = 0.75)
+# text(0, 0, labels = "(0, 0)", cex = 0.75)
 
 # hd <- hexgrid.coords(5, offset ="even", cell.radius = rad, rotation = "point-topped")
 # hexgrid.plot(hd[,,1,1], hd[,,1,2], cell.coords = hexcell.coords(rad, rotation = "point-topped"), col = rgb(0,0,1,.1), border = "grey50")
 # axis(1, labels = T)
 # axis(2, labels = T, las = 1)
 # mtext("Point-topped, even offset", side = 3, line = 0, cex = 0.75)
+# text(0, 0, labels = "(0, 0)", cex = 0.75)
 
 # hd <- hexgrid.coords(5, offset ="odd", cell.radius = rad, rotation = "point-topped")
 # hexgrid.plot(hd[,,1,1], hd[,,1,2], cell.coords = hexcell.coords(rad, rotation = "point-topped"), col = rgb(0,0,1,.1), border = "grey50")
 # axis(1, labels = T)
 # axis(2, labels = T, las = 1)
 # mtext("Point-topped, odd offset", side = 3, line = 0, cex = 0.75)
-# dev.off()
+# text(0, 0, labels = "(0, 0)", cex = 0.75)
+
+# # dev.off()

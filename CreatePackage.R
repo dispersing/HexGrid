@@ -1,7 +1,7 @@
 library(devtools)
-devtools::install_github("klutometis/roxygen")
+library(roxygen2)
 
-pkg.dir <- "~/Dropbox/Projects/HexGrid"
+pkg.dir <- "~/Dropbox/Projects/HexGrid_Package"
 setwd(pkg.dir)
 # create("HexGrid")
 document(paste(pkg.dir, "/HexGrid", sep = ""))
