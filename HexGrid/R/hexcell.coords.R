@@ -9,7 +9,7 @@
 #'    hexcell.coords()
 #'
 #' # Example 2, cell.radius = 2 and hexagon is point-topped
-#' hexcell.coords(2, roataion = "point-topped")
+#' hexcell.coords(2, rotation = "point-topped")
 
 hexcell.coords <- function(cell.radius = 1, rotation = "flat-topped"){
 	s <- sqrt(3)
