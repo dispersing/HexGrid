@@ -3,7 +3,7 @@ hexgrid.coords <- function(grid.dim, grid.shape = "rectangle", rotation = "flat-
 	if (any(offset == c("even","odd")) == F) {stop("offset must be either `even' or `odd'.")}
 	if (any(rotation == c("flat-topped","point-topped")) == F) {stop("rotation must be either `flat-topped' or `point-topped'.")}
 	if (length(grid.dim) == 1) {
-	
+
 	if (rotation == "flat-topped"){
 		q.dist <- 1.5*cell.radius #rows are 1.5 radii apart
 		r.dist <- sqrt(3)*cell.radius #columns are 3^0.5 radii apart
@@ -38,20 +38,20 @@ hexgrid.coords <- function(grid.dim, grid.shape = "rectangle", rotation = "flat-
 			rep(seq(q.dist, q.dist*grid.dim, q.dist), each = grid.dim),
 			rep(seq(r.dist, r.dist*grid.dim, r.dist), times = grid.dim)
 		), dim = c(grid.dim, grid.dim, 2))
-	
+
 		print(grid.arr)
-	
+
 		dist.arr <- array(data = NA, dim = c(grid.dim, grid.dim, grid.dim^2, 2))
-	
+
 		dist.arr[,,,1] <- outer(grid.arr[,,1], grid.arr[,,1], "-")	
 		dist.arr[,,,2] <- outer(grid.arr[,,2], grid.arr[,,2], "-")
-	
+
 		even.r <- seq(2, grid.dim, 2)
 		odd.r <- seq(1, grid.dim, 2)
-	
+
 		odd.mats <- as.vector(outer(seq(1, grid.dim^2, grid.dim*2), 0:(grid.dim-1), "+"))
 		even.mats <- as.vector(outer(seq((grid.dim+1), grid.dim^2, grid.dim*2), 0:(grid.dim-1), "+"))
-	
+
 		if (offset == "even"){
 		dist.arr[even.r, , odd.mats, 1] <- dist.arr[even.r, , odd.mats, 1] + q.dist/2
 		dist.arr[odd.r, , even.mats, 1] <- dist.arr[odd.r, , even.mats, 1] - q.dist/2
@@ -59,12 +59,10 @@ hexgrid.coords <- function(grid.dim, grid.shape = "rectangle", rotation = "flat-
 		dist.arr[even.r, , odd.mats, 1] <- dist.arr[even.r, , odd.mats, 1] - q.dist/2
 		dist.arr[odd.r, , even.mats, 1] <- dist.arr[odd.r, , even.mats, 1] + q.dist/2
 			} #end odd offset
-	
+
 		} # point-topped
 		} # grid.dim ==1
-	
-		
-	
+
 		return(dist.arr)
 	}
 

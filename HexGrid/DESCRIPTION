@@ -3,8 +3,10 @@ Title: Creates hexagonal objects for plotting and analysis
 Version: 0.1
 Authors@R: person("Christopher", "Moore", email = "life.dispersing@gmail.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph)
-Depends:
+Depends: 
     R (>= 3.2.4)
 License: What license is it under?
 LazyData: true
 RoxygenNote: 5.0.1.9000
+Suggests: knitr
+VignetteBuilder: knitr
