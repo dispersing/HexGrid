@@ -1,3 +1,19 @@
+#' Creating coordinates for a hexagonal lattice as a square or hexagonal grid
+#'
+#' @param grid.dim the dimention of the grid.  If \code{grid.shape = "rectangle"} and input vector is \code{length = one}, then it's square; if vector \code{length = 2}, then it's respectively rows and columns.  If \code{grid.shape = "hexagon"}, then input vector \code{length = one} corresponds to the radius (i.e., numer of rings).
+#' @param grid.shape the shape of the grid, either "rectangle" or "hexagon"
+#' @param rotation either of the two values: "flat-topped" or "point-topped"
+#' @param offset for \code{grid.shape = "rectangle"}, specifies 
+#' @param cell.radius length from the ceter of the cell to the six corners
+#' @description attempt
+#' @return a list of with horizontal and vertical coordinates, respectively names x and y.
+#' @examples
+#' # Example 1, default where cell.radius = 1 and hexagon is flat-topped
+#'    hexcell.coords()
+#'
+#' # Example 2, cell.radius = 2 and hexagon is point-topped
+#' hexcell.coords(2, rotation = "point-topped")
+
 hexgrid.coords <- function(grid.dim, grid.shape = "rectangle", rotation = "flat-topped", offset = "even", cell.radius = 1){
 	if (length(grid.dim) > 2) {stop("grid.dim can only be length 1 or 2 (hexagonal grid radius or rectangular grid, respectively)")}
 	if (any(offset == c("even","odd")) == F) {stop("offset must be either `even' or `odd'.")}
